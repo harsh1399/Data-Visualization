@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization – Homework 4</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.js"></script>
+    <script src="https://d3js.org/topojson.v3.js"></script>
+
+    <script src="js/line-chart.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>COVID-19 World Case Tracker</h1>
+        <p>Name: Harsh Mahajan; E-Mail: u1413898@utah.edu; UID: u1413898</p>
+    </div>
+
+    <div id="content">
+        <svg id="map">
+            <g id="graticules"></g>
+            <g id="countries"></g>
+            <g id="legend" >
+                <defs>
+                    <linearGradient id="color-gradient">
+                      <stop offset="0%" style="stop-color:#fef0d9;stop-opacity:1"></stop>
+                      <stop offset="15%" style="stop-color:#fdcc8a;stop-opacity:1"></stop>
+                      <stop offset="30%" style="stop-color:#fc8d59;stop-opacity:1"></stop>
+                      <stop offset="55%" style="stop-color:#e34a33;stop-opacity:1"></stop>
+                      <stop offset="80%" style="stop-color:#b30000;stop-opacity:1"></stop>
+                    </linearGradient> 
+                  </defs>
+            </g>
+        </svg>
+        <svg id="line-chart">
+            <g id="x-axis"></g>
+            <g id="y-axis"></g>
+            <g id="lines"></g>
+            <g id="overlay"><line></line></g>
+        </svg>
+        <button id="clear-button">Clear Selected Countries</button>
+    </div>
+</body>
+
+</html>
